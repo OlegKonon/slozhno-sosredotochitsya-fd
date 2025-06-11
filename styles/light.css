@@ -17,7 +17,7 @@
   --header-title-color: #ffc2e6;
 }
 
-@media (prefers-color-scheme: light){
+@media (prefers-color-scheme: light) {
   :root {
     --background-image-path: url(../images/cover-image-light.png);
     --regular-text-color: #353430;
@@ -32,6 +32,6 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
-.theme-light .header__rec{
+.theme-light .header__rec {
   display: none;
 }

@@ -275,8 +275,8 @@ footer::after {
   grid-column: 1;
 }
 
-@media (width >= 768px){
-  :root{
+@media (width >= 768px) {
+  :root {
     --space-between-sections: 60px;
     --images-gap: 20px;
     --content-indent: 20px;
@@ -352,7 +352,7 @@ footer::after {
   }
 }
 
-@media (width >= 1024px){
+@media (width >= 1024px) {
   .header {
     height: 768px;
   }
