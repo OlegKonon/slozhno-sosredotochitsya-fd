@@ -28,8 +28,8 @@
   height: 25px;
   left: var(--content-indent);
   bottom: var(--content-indent);
-  border-left: 1px solid var(--main-color);
-  border-bottom: 1px solid var(--main-color);
+  border-inline-start: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color);
 }
 
 .header::after{
@@ -39,8 +39,8 @@
   height: 25px;
   top: var(--content-indent);
   right: var(--content-indent);
-  border-top: 1px solid var(--main-color);
-  border-right: 1px solid var(--main-color);
+  border-block-start: 1px solid var(--main-color);
+  border-inline-end: 1px solid var(--main-color);
 }
 
 .header__theme-menu{
@@ -72,6 +72,7 @@
   size: 18px;
   line-height: 18px;
   font-family: 'IBM Plex mono';
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover{
@@ -79,7 +80,7 @@
 }
 
 .header__theme-menu-button:focus-visible{
-  border-bottom: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color);
   outline: none;
 }
 
@@ -172,7 +173,7 @@
 }
 
 .card__title{
-  margin-bottom: 10px;
+  margin-block-end: 10px;
   font-size: 18px;
   line-height: 23.4px;
 }
@@ -244,8 +245,8 @@ footer::before{
   height: 25px;
   bottom: var(--content-indent);
   left: var(--content-indent);
-  border-left: 1px solid var(--main-color);
-  border-bottom: 1px solid var(--main-color);
+  border-inline-start: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color);
 }
 
 footer::after{
@@ -255,8 +256,8 @@ footer::after{
   height: 25px;
   top: var(--content-indent);
   right: var(--content-indent);
-  border-top: 1px solid var(--main-color);
-  border-right: 1px solid var(--main-color);
+  border-block-start: 1px solid var(--main-color);
+  border-inline-end: 1px solid var(--main-color);
 }
 
 .footer__title{
@@ -292,7 +293,7 @@ footer::after{
 
   .header__title{
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-left: calc(-1 * var(--content-indent));
+    margin-inline-start: calc(-1 * var(--content-indent));
   }
 
   .header__description{
