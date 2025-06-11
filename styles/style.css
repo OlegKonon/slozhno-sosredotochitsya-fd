@@ -2,4 +2,388 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  width: 100%;
+  font-family: 'IBM Plex Mono';
+  background-image: var(--background-image-path);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  height: 668px;
+  padding: var(--content-indent);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  bottom: var(--content-indent);
+  left: var(--content-indent);
+  width: 25px;
+  height: 25px;
+  border-inline-start: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: var(--content-indent);
+  right: var(--content-indent);
+  width: 25px;
+  height: 25px;
+  border-inline-end: 1px solid var(--main-color);
+  border-block-start: 1px solid var(--main-color);
+}
+
+.header__theme-menu {
+  justify-self: self-end;
+  align-self: center;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  display: block;
+  color: var(--main-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.header__theme-menu-button {
+  justify-self: center;
+  align-self: center;
+  width: 70px;
+  height: 26px;
+  border: none;
+  font-family: 'IBM Plex mono';
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+  size: 18px;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--menu-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--main-color);
+  outline: none;
+}
+
+.header__theme-menu-button.header__theme-menu-button_active {
+  outline: 1px solid var(--main-color);
+  pointer-events: none;
+}
+
+.header__rec {
+  position: absolute;
+  top: var(--content-indent);
+  right: calc(var(--content-indent) + 28px);
+  display: block;
+  justify-self: center;
+  align-self: center;
+  width: 33px;
+  height: 26px;
+  color: var(--accent-color);
+  font-family: 'IBM Plex Mono';
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.header__rec::after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: -19px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.header__title {
+  align-self: center;
+  color: var(--header-title-color);
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__description {
+  display: block;
+  justify-self: end;
+  align-self: center;
+  max-width: 355px;
+  color: #000028;
+  font-family: 'IBM Plex Mono';
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--accent-color);
+}
+
+.content {
+  display: grid;
+  gap: 49px;
+  margin: var(--space-between-sections) var(--content-indent);
+}
+
+.block {
+  display: grid;
+  gap: 20px;
+}
+
+.block__card-list {
+  display: grid;
+  gap: 20px;
+}
+
+.block__card-list-item {
+  display: grid;
+  gap: 10px;
+}
+
+.block__images-list {
+  display: grid;
+  gap: var(--images-gap);
+}
+
+.section-title {
+  color: var(--main-color);
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.card__title {
+  margin-block-end: 10px;
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 400;
+}
+
+.title-decor {
+  color: #000028;
+  background-color: var(--accent-color);
+}
+
+.card__text {
+  color: var(--regular-text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.card__text-link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+  cursor: pointer;
+}
+
+.card__text-link:hover {
+  border-bottom: 1px solid var(--regular-text-color);
+}
+
+.card__text-link:focus-visible {
+  outline: 1px solid var(--regular-text-color);
+  text-decoration: none;
+}
+
+.images-block {
+  display: grid;
+  gap: var(--images-gap);
+}
+
+.images-block__title {
+  margin-bottom: 10px;
+  color: #000028;
+  background-color: #ff0070;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 668px;
+  padding: var(--content-indent);
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  bottom: var(--content-indent);
+  left: var(--content-indent);
+  width: 25px;
+  height: 25px;
+  border-inline-start: 1px solid var(--main-color);
+  border-block-end: 1px solid var(--main-color);
+}
+
+footer::after {
+  content: '';
+  position: absolute;
+  top: var(--content-indent);
+  right: var(--content-indent);
+  width: 25px;
+  height: 25px;
+  border-inline-end: 1px solid var(--main-color);
+  border-block-start: 1px solid var(--main-color);
+}
+
+.footer__title {
+  color: var(--header-title-color);
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 83%;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.what-block {
+  display: grid;
+}
+
+.what-block > .block__card-list {
+  grid-column: 1;
+}
+
+@media (width >= 768px) {
+  :root {
+    --space-between-sections: 60px;
+    --images-gap: 20px;
+    --content-indent: 20px;
+  }
+
+  .header {
+    height: 1024px;
+  }
+
+  .header__title {
+    margin-inline-start: calc(-1 * var(--content-indent));
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__description {
+    max-width: 50%;
+  }
+
+  .content {
+    gap: 80px;
+  }
+
+  .why-block {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .what-block > .section-title {
+    max-width: 30%;
+  }
+
+  .how-block {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .block__card-list {
+    grid-column: 2/3;
+  }
+
+  .block__images-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ice-cream-image-item {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+  .sunset-image-item {
+    grid-column: 1/3;
+  }
+
+  .tape-image-item {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .books-image-item {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .street-image-item {
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+
+  .footer {
+    height: 1024px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    height: 768px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: unset;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu-list {
+    grid-auto-flow: column;
+  }
+
+  .block {
+    gap: 10px;
+  }
+
+  .what-block {
+    gap: 20px;
+  }
+
+  .what-block > .block__card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer {
+    height: 768px;
+  }
 }
