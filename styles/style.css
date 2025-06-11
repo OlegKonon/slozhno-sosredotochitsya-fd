@@ -5,47 +5,47 @@
   width: 100%;
   font-family: 'IBM Plex Mono';
   background-image: var(--background-image-path);
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
+  position: relative;
   display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  height: 668px;
+  padding: var(--content-indent);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 668px;
-  grid-template-rows: 1fr min-content 1fr;
-  padding: var(--content-indent);
-  position: relative;
 }
 
 .header::before{
-  position: absolute;
   content: '';
+  position: absolute;
+  bottom: var(--content-indent);
+  left: var(--content-indent);
   width: 25px;
   height: 25px;
-  left: var(--content-indent);
-  bottom: var(--content-indent);
   border-inline-start: 1px solid var(--main-color);
   border-block-end: 1px solid var(--main-color);
 }
 
 .header::after{
-  position: absolute;
   content: '';
-  width: 25px;
-  height: 25px;
+  position: absolute;
   top: var(--content-indent);
   right: var(--content-indent);
-  border-block-start: 1px solid var(--main-color);
+  width: 25px;
+  height: 25px;
   border-inline-end: 1px solid var(--main-color);
+  border-block-start: 1px solid var(--main-color);
 }
 
 .header__theme-menu{
-  align-self: center;
   justify-self: self-end;
+  align-self: center;
 }
 
 .header__theme-menu-list{
@@ -62,17 +62,17 @@
 }
 
 .header__theme-menu-button{
+  justify-self: center;
+  align-self: center;
   width: 70px;
   height: 26px;
-  align-self: center;
-  justify-self: center;
-  background-color: transparent;
   border: none;
-  text-transform: lowercase;
-  size: 18px;
-  line-height: 18px;
   font-family: 'IBM Plex mono';
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
   cursor: pointer;
+  size: 18px;
 }
 
 .header__theme-menu-button:hover{
@@ -90,60 +90,60 @@
 }
 
 .header__rec{
-  display: block;
   position: absolute;
-  text-transform: uppercase;
   top: var(--content-indent);
   right: calc(var(--content-indent) + 28px);
+  display: block;
+  justify-self: center;
+  align-self: center;
   width: 33px;
   height: 26px;
-  align-self: center;
-  justify-self: center;
   color: var(--accent-color);
   font-family: 'IBM Plex Mono';
   font-size: 18px;
   line-height: 25px;
+  text-transform: uppercase;
 }
 
 .header__rec::after{
-  position: absolute;
   content: '';
-  right: -19px;
+  position: absolute;
   top: 9px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
+  right: -19px;
   width: 9px;
   height: 9px;
+  border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
 }
 
 .header__title {
+  align-self: center;
+  color: var(--header-title-color);
+  font-family: 'IBM Plex Mono';
   font-weight: 700;
   font-size: 116px;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  align-self: center;
-  font-family: 'IBM Plex Mono';
-  color: var(--header-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .header__description {
   display: block;
-  background-color: var(--accent-color);
+  justify-self: end;
+  align-self: center;
+  max-width: 355px;
   color: #000028;
+  font-family: 'IBM Plex Mono';
   font-size: 18px;
   line-height: 23.4px;
-  font-family: 'IBM Plex Mono';
-  align-self: center;
-  justify-self: end;
-  max-width: 355px;
+  background-color: var(--accent-color);
 }
 
 .content {
-  margin: var(--space-between-sections) var(--content-indent);
   display: grid;
   gap: 49px;
+  margin: var(--space-between-sections) var(--content-indent);
 }
 
 .block{
@@ -167,9 +167,9 @@
 }
 
 .section-title{
+  color: var(--main-color);
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--main-color);
 }
 
 .card__title{
@@ -179,8 +179,8 @@
 }
 
 .title-decor{
-  background-color: var(--accent-color);
   color: #000028;
+  background-color: var(--accent-color);
 }
 
 .card__title{
@@ -188,15 +188,15 @@
 }
 
 .card__text{
+  color: var(--regular-text-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--regular-text-color);
 }
 
 .card__text-link{
-  text-shadow: 2px 1px 0 var(--accent-color);
   text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
   cursor: pointer;
 }
 
@@ -206,7 +206,6 @@
 
 .card__text-link:focus-visible{
   outline: 1px solid var(--regular-text-color);
-  /*border: 1px solid var(--regular-text-color);*/
   text-decoration: none;
 }
 
@@ -216,55 +215,55 @@
 }
 
 .images-block__title{
-  background-color: #ff0070;
-  color: #000028;
   margin-bottom: 10px;
+  color: #000028;
+  background-color: #ff0070;
 }
 
 .card__img{
+  display: block;
   width: 100%;
   height: 100%;
   max-height: 100%;
-  display: block;
   object-fit: cover;
 }
 
 .footer{
   position: relative;
   display: grid;
-  padding: var(--content-indent);
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 668px;
+  padding: var(--content-indent);
 }
 
 footer::before{
-  position: absolute;
   content: '';
-  width: 25px;
-  height: 25px;
+  position: absolute;
   bottom: var(--content-indent);
   left: var(--content-indent);
+  width: 25px;
+  height: 25px;
   border-inline-start: 1px solid var(--main-color);
   border-block-end: 1px solid var(--main-color);
 }
 
 footer::after{
-  position: absolute;
   content: '';
-  width: 25px;
-  height: 25px;
+  position: absolute;
   top: var(--content-indent);
   right: var(--content-indent);
-  border-block-start: 1px solid var(--main-color);
+  width: 25px;
+  height: 25px;
   border-inline-end: 1px solid var(--main-color);
+  border-block-start: 1px solid var(--main-color);
 }
 
 .footer__title{
+  color: var(--header-title-color);
   font-weight: 700;
   font-size: 116px;
   line-height: 83%;
-  color: var(--header-title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -292,8 +291,8 @@ footer::after{
   }
 
   .header__title{
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: calc(-1 * var(--content-indent));
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description{
@@ -364,8 +363,8 @@ footer::after{
   }
 
   .header__theme-menu{
-    align-self: unset;
     justify-self: center;
+    align-self: unset;
   }
 
   .header__title{
