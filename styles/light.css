@@ -10,28 +10,34 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --background-image-path: url(../images/cover-image-light.png);
+  --background-color: #fff1f7;
   --regular-text-color: #353430;
   --main-color: var(--regular-text-color);
   --accent-color: #ff8dcb;
   --menu-hover-color: #32312d66;
   --header-title-color: #ffc2e6;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-image-path: url(../images/cover-image-light.png);
-    --regular-text-color: #353430;
-    --main-color: var(--regular-text-color);
-    --accent-color: #ff8dcb;
-    --menu-hover-color: #32312d66;
-    --header-title-color: #ffc2e6;
-  }
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  --secondary-text-color: #353430;
 }
 
 .theme-light .header__rec {
   display: none;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-image-path: url(../images/cover-image-light.png);
+    --background-color: #fff1f7;
+    --regular-text-color: #353430;
+    --main-color: var(--regular-text-color);
+    --accent-color: #ff8dcb;
+    --menu-hover-color: #32312d66;
+    --header-title-color: #ffc2e6;
+    --secondary-text-color: #353430;
+  }
+
+  .theme-light .header__rec {
+    display: none;
+  }
+}
+
+
