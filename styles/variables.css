@@ -5,11 +5,21 @@
 :root {
   --accent-color: #ff0070;
   --menu-hover-color: #ff007066;
+  --secondary-text-color: #000028;
   --regular-text-color: #f1b2ce;
   --background-image-path: url(../images/cover-image-dark.png);
+  --background-color: #000024;
   --space-between-sections: 40px;
   --images-gap: 10px;
   --content-indent: 10px;
   --main-color: var(--accent-color);
   --header-title-color: #db00ff;
+}
+
+@media (width >= 768px) {
+  :root {
+    --space-between-sections: 60px;
+    --images-gap: 20px;
+    --content-indent: 20px;
+  }
 }
