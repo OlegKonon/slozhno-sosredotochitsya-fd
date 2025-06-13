@@ -268,7 +268,7 @@
     max-width: 30%;
   }
 
-  .one-two-column-block {
+  .why-how-block {
     grid-template-columns: 1fr 2fr;
   }
 

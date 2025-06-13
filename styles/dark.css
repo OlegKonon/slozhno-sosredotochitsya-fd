@@ -18,3 +18,7 @@
   --main-color: var(--accent-color);
   --header-title-color: #db00ff;
 }
+
+.theme-dark .header__rec {
+  display: block;
+}
